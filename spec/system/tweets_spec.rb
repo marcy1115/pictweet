@@ -29,7 +29,7 @@ RSpec.describe "ツイート投稿", type: :system do
       # トップページに遷移する
       visit root_path
       # トップページには先ほど投稿した内容のツイートが存在する(画像)
-      expect(page).to have_selector ".content_post[style='background-image: url(#{@tweet_image});']"
+      expect(page).to have_selector ".content_post[style='background-image: url(#{ @tweet_image });']"
       # トップページには先ほど投稿した内容のツイートが存在する(テキスト)
       expect( page ).to have_content( @tweet_text )
     end
